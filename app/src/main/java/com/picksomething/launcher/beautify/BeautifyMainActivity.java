@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -81,7 +82,7 @@ public class BeautifyMainActivity extends AppCompatActivity {
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         density = metrics.density;
-        LinearLayout.LayoutParams indicatorLineLayoutParams = (LinearLayout.LayoutParams)
+        FrameLayout.LayoutParams indicatorLineLayoutParams = (FrameLayout.LayoutParams)
                 indicatorLine.getLayoutParams();
         indicatorLineLayoutParams.width = (int) (48 * density);
         indicatorLine.setLayoutParams(indicatorLineLayoutParams);
@@ -98,7 +99,7 @@ public class BeautifyMainActivity extends AppCompatActivity {
          */
         @Override
         public void onPageScrolled(int position, float offset, int offsetPixels) {
-            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams)
+            FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams)
                     indicatorLine.getLayoutParams();
 
             Log.d("offset:", offset + "");
