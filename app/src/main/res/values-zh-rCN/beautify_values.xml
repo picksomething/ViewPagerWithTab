@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bm_theme_title">主题</string>
+    <string name="bm_wallpaper_title">壁纸</string>
+    <string name="bm_font_title">字体</string>
+</resources>
