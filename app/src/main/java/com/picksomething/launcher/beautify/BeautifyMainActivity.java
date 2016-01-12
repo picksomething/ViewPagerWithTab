@@ -5,10 +5,8 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.picksomething.launcher.R;
@@ -101,13 +99,10 @@ public class BeautifyMainActivity extends AppCompatActivity {
         public void onPageScrolled(int position, float offset, int offsetPixels) {
             FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams)
                     indicatorLine.getLayoutParams();
-
-            Log.d("offset:", offset + "");
             /**
-             * 利用currentIndex(当前所在页面)和position(下一个页面)以及offset来
+             * 利用currentIndex(当前所在页面)和position以及offset来
              * 设置indicatorLine的左边距 滑动场景：
-             * 记3个页面,
-             * 从左到右分别为0,1,2
+             * 记3个页面,从左到右分别为0,1,2
              * 0->1; 1->2; 2->1; 1->0
              */
 
@@ -160,7 +155,7 @@ public class BeautifyMainActivity extends AppCompatActivity {
     };
 
     /**
-     * 重置颜色
+     * reset color
      */
     private void resetTextView() {
         wallpaperTitle.setTextColor(ContextCompat.getColor(this, R.color.bm_tab_text));
